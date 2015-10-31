@@ -1,7 +1,27 @@
-# jQuery File Upload Plugin
+
+# jQuery File Upload Plugin for bootstrap v3 (extended)
+
+##Extension Widget File
+ - custom.fileupload-ui.js
+
+## Added to widget:
+ - 'o.unid' variable in templates. This hold the last used UniqueId. (append it with the incrementor to create unique objects)
+ - Show modal (dialog) delete messages. (one message on multiple selected files)
+ - a rendered template can be custom rendered before injecting it into the DOM. (jQuery-Ui / Custom styling)
+ - buttons are disabled when action cannot be executed.
+ - The 'select all' checkbox is (un-)checked when a selection changes.  
+
+##New options
+ - autoLoad (true / false): load existing data from server when widget is initialized. the Url is specified on form element (data-url attribute).
+ - delButtons (selector): selector for the delete buttons inside the table. 
+ - delAllButtons (selector): selector for the deleteAll buttons
+ - renderTemplate (function(r)): a callback function to render the template before being inserted in the DOM.
+ - confirmDeletion (function(e,data)): a callback function to display a non-blocking message. use e.doDelete() to perform the delete. the 'data' variable holds data attributes from the delete buttons)
 
 ## Demo
-[Demo File Upload](https://blueimp.github.io/jQuery-File-Upload/)
+[Demo File Upload](https://blueimp.github.io/jQuery-File-Upload/) (from blueimp)
+
+bootstrap demo, see bootstrap_demo folder.
 
 ## Description
 File Upload widget with multiple file selection, drag&amp;drop support, progress bars, validation and preview images, audio and video for jQuery.  
