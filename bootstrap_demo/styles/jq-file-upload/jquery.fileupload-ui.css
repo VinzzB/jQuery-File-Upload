@@ -1,0 +1,63 @@
+@charset "UTF-8";
+/*
+ * jQuery File Upload UI Plugin CSS
+ * https://github.com/blueimp/jQuery-File-Upload
+ *
+ * Copyright 2010, Sebastian Tschan
+ * https://blueimp.net
+ *
+ * Licensed under the MIT license:
+ * http://www.opensource.org/licenses/MIT
+ */
+
+.progress-animated .progress-bar,
+.progress-animated .bar {
+  background: url("../img/progressbar.gif") !important;
+  filter: none;
+}
+.fileupload-process {
+  float: right;
+  display: none;
+}
+.fileupload-processing .fileupload-process,
+.files .processing .preview {
+  display: block;
+  width: 32px;
+  height: 32px;
+  background: url("../img/loading.gif") center no-repeat;
+  background-size: contain;
+}
+
+#fileupload .table  button {
+	min-width: 110px;
+}
+
+@media (max-width: 767px) {
+	/*Hide optional text */
+  .fileupload-buttonbar .toggle,
+  .files .toggle,
+  .files .btn .optional {
+    display: none;
+    padding: 0;
+    margin: 0;
+   
+  }
+  /* Small buttons */
+  #fileupload .table  button {
+	 width: auto;
+	 min-width:0;
+}
+  
+  .files .name {
+    width: 80px;
+    word-wrap: break-word;
+  }
+  .files audio,
+  .files video {
+    max-width: 80px;
+  }
+  .files img,
+  .files canvas {
+    max-width: 100%;
+  }
+}

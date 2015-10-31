@@ -1,0 +1,24 @@
+{
+    "files": [
+        {
+            "msgType": "info",
+            "size": 5675,
+            "name": "file1.txt",
+            "deleteType": "DELETE",
+            "deleteUrl": "./delresult1.json",
+            "message": "Ready",
+            "msgTag": "Info",
+            "url": "/api/v1/doc/1"
+        },
+        {
+            "msgType": "warning",
+            "size": 373,
+            "name": "file2.txt",
+            "deleteType": "DELETE",
+            "deleteUrl": "./delresult2.json",
+            "message": "Some warning",
+            "msgTag": "Warn",
+            "url": "/api/v1/doc/2"
+        }
+    ]
+}
