@@ -22,6 +22,20 @@
 [Demo File Upload](https://blueimp.github.io/jQuery-File-Upload/) (from blueimp)
 
 bootstrap demo, see bootstrap_demo folder or http://vinzz.be/FileUploadDemo/ (uploads disabled).
+```js
+$('#fileupload').fileupload({ 
+	autoLoad: true,
+	renderTemplate: function(r) { 		
+		//you can customize the rendered template here.
+		//arg r holds the currently rendered template
+	},		
+	confirmDeletion: function(e,data) {			
+		//see bootstrap demo for full example (with modal dialog)
+		var doDel = confirm('delete ' + data.files.length + ' files?','Continue?');
+		if (doDel) { e.doDelete(); } //perform delete 
+	}
+});    
+```
 
 ## Description
 File Upload widget with multiple file selection, drag&amp;drop support, progress bars, validation and preview images, audio and video for jQuery.  
