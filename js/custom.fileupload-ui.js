@@ -142,8 +142,8 @@ $.widget( "blueimp.fileupload", $.blueimp.fileupload, {
     _hookCheckboxRows: function(tm) {
     	var me = this;
 		$("input.toggle[type=checkbox]",tm).on('change', function() {
-			var btns = $("input.toggle[type=checkbox]",tm).not(":disabled"); //get all non disabled buttons
-			var selBtns = $("input.toggle[type=checkbox]:checked",tm).not(":disabled"); //get all checked buttons that are not disabled.
+			var btns = $("input.toggle[type=checkbox]",$("tbody",me.element)).not(":disabled"); //get all non disabled buttons
+			var selBtns = $("input.toggle[type=checkbox]:checked",$("tbody",me.element)).not(":disabled"); //get all checked buttons that are not disabled.
 			$(".toggleAll",me.element).prop("checked", selBtns.length == btns.length).change() //equals checks? 
 			$(me.options.delAllButtons,me.element).prop("disabled", !selBtns.length); //enable or disable 'delete all' button		
 		});		
